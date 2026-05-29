@@ -91,11 +91,11 @@ def fitness(individual):
 
         camas_ocupadas.add((cama, turno))
 
-        # ✅ conteo de turnos
+        # conteo de turnos
         contador_turnos = {}
         contador_turnos[turno] = contador_turnos.get(turno, 0) + 1
 
-    # ✅ penalización por saturación
+    # penalización por saturación
     
     for turno, cantidad in contador_turnos.items():
         if cantidad > 2:
@@ -195,7 +195,7 @@ def genetic_algorithm(
     best_overall = None
     best_fit_overall = float("-inf")
 
-    # 🔥 HISTÓRICOS
+    # HISTÓRICOS
     best_fitness_history = []
     avg_fitness_history = []
     worst_fitness_history = []
@@ -330,7 +330,7 @@ if __name__ == "__main__":
 
     plt.figure(figsize=(10,5))
 
-    # ✅ Mejora visual (lado a lado)
+    # Mejora visual (lado a lado)
     plt.bar([i - 0.2 for i in x], esperas, width=0.4, label="Tiempo de espera")
     plt.bar([i + 0.2 for i in x], costos, width=0.4, label="Costo")
 
